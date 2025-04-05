@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Website with Navigation Bar</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: #f9fafb;
+            color: #333;
+        }
+
+        header {
+            background-color: #4F46E5;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Sticky Navigation Bar */
+        nav {
+            background-color: #4338CA;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 24px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #3730A3;
+            border-radius: 6px;
+        }
+
+        nav a.active {
+            background-color: white;
+            color: #4338CA;
+            border-radius: 6px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 30px;
+            gap: 20px;
+        }
+
+        .sidebar {
+            flex: 1;
+            min-width: 250px;
+            background-color: #eef2ff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .sidebar h2 {
+            margin-top: 0;
+            color: #4F46E5;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar ul li a {
+            color: #4338CA;
+            text-decoration: none;
+        }
+
+        .sidebar ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .main {
+            flex: 2.5;
+            min-width: 300px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .main h2 {
+            color: #111827;
+            margin-top: 0;
+        }
+
+        footer {
+            background-color: #4F46E5;
+            color: white;
+            text-align: center;
+            padding: 15px 10px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>My Website with Navigation</h1>
+        <p>Modern, responsive, and user-friendly</p>
+    </header>
+
+    <nav>
+        <a href="#" class="active">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Portfolio</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div class="container">
+        <div class="sidebar">
+            <h2>Sidebar</h2>
+            <p>Quick links and extra content.</p>
+            <ul>
+                <li><a href="#">Link One</a></li>
+                <li><a href="#">Link Two</a></li>
+                <li><a href="#">Link Three</a></li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <h2>Main Content Area</h2>
+            <p>This is the main section. Your content goes here in a clean and modern layout.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec nisi eget orci gravida porttitor.
+                Duis eget sapien in ligula malesuada fermentum.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 My Website. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
